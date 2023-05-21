@@ -51,8 +51,8 @@ Please ensure you have these installed before running the scripts.
 
 ## :pencil: Note on Code Aesthetics
 
-While I'm proud of what Arachnida accomplishes, I'd like to acknowledge upfront that you may not find it to be the most beautiful or elegantly structured code. Nonetheless, my focus has been on functionality and robustness. I believe in the saying, "First make it work, then make it beautiful." :blush: 
+Arachnida represents my first journey into Python programming. As such, while I'm proud of what Arachnida accomplishes, I'd like to acknowledge upfront that you might not find it to be the most beautiful or elegantly structured code. Nonetheless, my focus has been on functionality and robustness. This project has been a learning curve, and I strongly believe in the saying, "First make it work, then make it beautiful." :blush:
 
-Remember, the beauty of a tool lies in its effectiveness and ability to get the job done. And Arachnida does its job well. Over time, I hope to improve the aesthetics of the code without compromising its functionality. 
+Remember, the beauty of a tool lies in its effectiveness and ability to get the job done. And Arachnida does its job well. As I grow in my Python journey, I hope to improve the aesthetics of the code without compromising its functionality. 
 
-If you have any suggestions for improving the code design or structure, I'm open to your ideas! Please feel free to contribute. After all, code beauty is often found in the eye of the beholder. :heart:
+If you have any suggestions for improving the code design or structure, I'm all ears! Please feel free to contribute. After all, code beauty is often found in the eye of the beholder. :heart:
