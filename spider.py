@@ -19,18 +19,38 @@ from bs4 import BeautifulSoup, SoupStrainer
 import os
 import argparse
 
+# Argument parsing
 parser = argparse.ArgumentParser(description='Web scraper to download images and documents')
-parser.add_argument('url', type=str, help='The URL to start scraping from')
-parser.add_argument('-r', '--recursive', action='store_true', default=False, help='Whether to scrape recursively')
-parser.add_argument('-l', '--depth', type=int, default=5, help='The maximum depth to scrape to (default: 5)')
-parser.add_argument('-p', '--path', type=str, default='data', help='The directory to save images and documents to (default: data)')
 
+parser.add_argument('url',
+                    type=str,
+                    help='The URL to start scraping from')
+
+parser.add_argument('-r',
+                    '--recursive',
+                    action='store_true',
+                    default=False,
+                    help='Whether to scrape recursively')
+
+parser.add_argument('-l',
+                    '--depth',
+                    type=int,
+                    default=5,
+                    help='The maximum depth to scrape to (default: 5)')
+
+parser.add_argument('-p',
+                    '--path',
+                    type=str,
+                    default='data',
+                    help='The directory to save images and documents to (default: data)')
+
+# Argument variables
 args = parser.parse_args()
-
 main_url = args.url
 max_depth = args.depth
 save_dir = args.path
 
+# Setting depth when program's not recursive
 if not args.recursive:
     max_depth = 0
 
@@ -57,7 +77,7 @@ def recursive_scraper(url, main_domain, max_depth, visited_urls, url_list, curre
             # print(f"Error: {e}")
             pass
 
-# Inicio Variables:
+# Starting the variables:
 main_domain = urlparse(main_url).netloc
 img_count = 0
 visited_urls = set()
@@ -66,7 +86,7 @@ url_list = []
 recursive_scraper(main_url, main_domain, max_depth, visited_urls, url_list)
 # print("-------------------------------------")
 
-# Bucle para img:
+# IMG loop:
 for item in url_list:
     try:
         htmldata = urlopen(item).read()
@@ -95,7 +115,7 @@ for item in url_list:
                 except Exception as e:
                     pass
 
-# Bucle para image:
+# IMAGE loop:
 for item in url_list:
     try:
         htmldata = urlopen(item).read()
@@ -123,7 +143,7 @@ for item in url_list:
                     img_count += 1
                 except Exception as e:
                     pass
-# Picture:
+# PICTURE loop:
 for item in url_list:
     try:
         htmldata = urlopen(item).read()
@@ -152,9 +172,11 @@ for item in url_list:
                 except Exception as e:
                     pass
 
+# Doc dir creation for text files:
 if not os.path.exists('docs'):
     os.makedirs('docs')
 
+# Text files downloading function:
 for link in url_list:
     file_ext = link.split('.')[-1]
     
