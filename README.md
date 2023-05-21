@@ -48,3 +48,11 @@ If no directory is provided, it will read the EXIF data for each image in the cu
 - getkey
 
 Please ensure you have these installed before running the scripts.
+
+## :pencil: Note on Code Aesthetics
+
+While I'm proud of what Arachnida accomplishes, I'd like to acknowledge upfront that you may not find it to be the most beautiful or elegantly structured code. Nonetheless, my focus has been on functionality and robustness. I believe in the saying, "First make it work, then make it beautiful." :blush: 
+
+Remember, the beauty of a tool lies in its effectiveness and ability to get the job done. And Arachnida does its job well. Over time, I hope to improve the aesthetics of the code without compromising its functionality. 
+
+If you have any suggestions for improving the code design or structure, I'm open to your ideas! Please feel free to contribute. After all, code beauty is often found in the eye of the beholder. :heart:
